@@ -19,4 +19,4 @@ io.on("connection", (socket) => {
   });
 });
 
-http.listen(PORT, () => {});
+http.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
