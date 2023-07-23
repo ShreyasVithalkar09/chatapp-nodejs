@@ -14,11 +14,9 @@ app.get("/", (req, res) => {
 // socket
 const io = require("socket.io")(http);
 io.on("connection", (socket) => {
-  console.log("Connected....");
-
   socket.on("messageSend", (msg) => {
     socket.broadcast.emit("message", msg);
   });
 });
 
-http.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
+http.listen(PORT, () => {});
